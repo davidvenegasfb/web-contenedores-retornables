@@ -1,0 +1,53 @@
+<div class="col-md-4 offset-md-4">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <!--<table id="t1">
+                        <td>
+                            <p>Calle: </p>
+                        </td>
+                        <td>
+                            <select id="select1" class="form-control" #calle name="calle" (change)="callDenominacion(calle.value)">
+                                <option class="col-md-4" *ngFor="let callex of calles" [value]="callex.denominacion">
+                                    {{callex.denominacion}}
+                                </option>
+                            </select>
+                        </td>
+                    </table>-->
+                    <table id="t1">
+                        <td>
+                            <p>Calle: </p>
+                        </td>
+                        <td>
+                            <div class="list-container">
+                                <dx-list 
+                                    #list
+                                    [dataSource]="tasks"
+                                    [height]="200"
+                                    [searchEnabled]="true"
+                                    searchExpr="denominacion"
+                                    selectionMode="single"
+                                    searchMode="contains"><!--startsWith-->
+                                        <div *dxTemplate="let callex of 'item'">
+                                            <div>{{callex.denominacion}}</div>
+                                        </div>
+                                </dx-list>
+                                <!--<div class="selected-data">
+                                    <span class="caption">Selected IDs:</span>
+                                    <span>{{list.selectedItemKeys}}</span>
+                                </div>-->
+                            </div>
+                        </td>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <input size="2" type="text" placeholder="Número (dejar en blanco si se desconoce)" class="form-control" #numero name="numero">
+                </div>
+                <button type="submit" class="btn btn-danger" (click)="buscar(list.selectedItemKeys, numero.value)">
+                    Buscar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
