@@ -18,6 +18,7 @@ import { VerBajaComponent } from './components/ver-baja/ver-baja.component';
 import { FirmaComponent } from './components/firma/firma.component';
 import { CompraComponent } from './components/compra/compra.component';
 
+//definimos las rutas a cada componente
 const routes: Routes = [
   {
     path: '',
