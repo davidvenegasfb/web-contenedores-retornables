@@ -24,6 +24,9 @@ import { BajasComponent } from './components/bajas/bajas.component';
 import { VerReposicionComponent } from './components/ver-reposicion/ver-reposicion.component';
 import { FirmaComponent } from './components/firma/firma.component';
 import { ReponerComponent } from './components/reponer/reponer.component';
+import { CompraComponent } from './components/compra/compra.component';
+import { StockComponent } from './components/stock/stock.component';
+import { VerBajaComponent } from './components/ver-baja/ver-baja.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { ReponerComponent } from './components/reponer/reponer.component';
     BajasComponent,
     VerReposicionComponent,
     FirmaComponent,
-    ReponerComponent
+    ReponerComponent,
+    CompraComponent,
+    StockComponent,
+    VerBajaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,45 @@
+<div class="col-md-4 offset-md-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <div>
+                    <form>
+                        <div>
+                            <table style="width: 100%;">
+                                <td style="width: 50%;">
+                                    <div>
+                                        <p>Cantidad:</p>
+                                    </div>
+                                </td>
+                                <td id="td1" style="width: 50%;">
+                                    <input id="input1" type="text" name="datos" [(ngModel)]="datos.cantidad" placeholder="Cantidad" class="form-control">
+                                </td>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <table style="width: 100%;">
+                                    <td style="width: 50%;">
+                                        <p>Capacidad: </p>
+                                    </td>
+                                    <td id="td1" style="width: 50%;">
+                                        <select id="input1" name="capacidad" [(ngModel)]="datos.capacidad" class="form-control">
+                                        <option>120</option> 
+                                        <option>240</option> 
+                                        <option>360</option> 
+                                        <option>800</option>
+                                        <option>1000</option>
+                                        </select>
+                                    </td>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button type="button" class="btn btn-danger" (click)="compraContenedores()">
+                    Comprar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

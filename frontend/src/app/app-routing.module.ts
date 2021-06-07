@@ -12,8 +12,11 @@ import { Buscar1Component } from './components/buscar1/buscar1.component';
 import { Buscar2Component } from './components/buscar2/buscar2.component';
 import { ReposicionesComponent } from './components/reposiciones/reposiciones.component';
 import { BajasComponent } from './components/bajas/bajas.component';
+import { StockComponent } from './components/stock/stock.component';
 import { VerReposicionComponent } from './components/ver-reposicion/ver-reposicion.component';
+import { VerBajaComponent } from './components/ver-baja/ver-baja.component';
 import { FirmaComponent } from './components/firma/firma.component';
+import { CompraComponent } from './components/compra/compra.component';
 
 const routes: Routes = [
   {
@@ -65,6 +68,15 @@ const routes: Routes = [
   },{
     path: 'contenedores/reponerp1/:matricula',
     component: ReponerComponent
+  },{
+    path: 'contenedores/baja/:matricula',
+    component: VerBajaComponent
+  },{
+    path: 'contenedores/stock',
+    component: StockComponent
+  },{
+    path: 'contenedores/compra',
+    component: CompraComponent
   }
 ];
 

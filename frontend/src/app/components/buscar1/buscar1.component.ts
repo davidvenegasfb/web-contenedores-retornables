@@ -70,4 +70,8 @@ export class Buscar1Component implements OnInit {
     this.router.navigate(['/contenedores/reponerp1/', contenedor.matricula]);
   }
 
+  verReposiciones(contenedor: Contenedor) {
+    this.router.navigate(['/contenedores/reposiciones/', contenedor.matricula]);
+  }
+
 }

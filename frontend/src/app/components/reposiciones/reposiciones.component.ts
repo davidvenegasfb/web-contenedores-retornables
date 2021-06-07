@@ -52,5 +52,4 @@ export class ReposicionesComponent {
     this.router.navigate(['/contenedores/reposicion/', matricula]);
   }
 
-
 }

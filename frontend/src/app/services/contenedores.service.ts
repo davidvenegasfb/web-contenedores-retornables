@@ -98,4 +98,13 @@ export class ContenedoresService {
     return this.http.post(`${this.API_URI}/contenedores/reposicion`, data)
   }
 
+  comprarContenedores(cantidad: number, capacidad: number): Observable<Contenedor> {
+    var data = {capacidad,cantidad};
+    return this.http.post(`${this.API_URI}/contenedores/compra`, data)
+  }
+
+  getStock() {
+    return this.http.get(`${this.API_URI}/contenedores/stock`)
+  }
+
 }
