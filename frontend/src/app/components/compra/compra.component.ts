@@ -18,6 +18,7 @@ export class CompraComponent {
   datos: Datos = {
   };
 
+  //Guardamos los contenedores comprados
   compraContenedores() {
     this.contenedoresService.comprarContenedores(this.datos.cantidad,this.datos.capacidad)
     .subscribe(

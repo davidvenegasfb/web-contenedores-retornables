@@ -19,6 +19,7 @@ export class BajasComponent {
   @HostBinding('class') classes = 'row';
 
   ngOnInit() {
+    //Guardamos las bajar
     this.contenedoresService.verBajas()
       .subscribe(
         res => {
@@ -30,6 +31,7 @@ export class BajasComponent {
   }
 
   Parser(bajas){
+    //Para cada baja, ponemos la fecha en formato correcto
     for(var _i = 0; _i < bajas.length; _i++){
       var str = bajas[_i].fechabaja;
       var Fecha_correcta1 = str.replace('T23:00:00.000Z','');
@@ -45,6 +47,7 @@ export class BajasComponent {
     }
   }
 
+  //Llamamos a ver la baja del contenedor que se haya elegido
   seeBajas(matricula: number) {
     this.router.navigate(['/contenedores/baja/', matricula]);
   }

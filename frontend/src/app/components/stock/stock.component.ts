@@ -18,6 +18,7 @@ export class StockComponent {
 
   }
   ngOnInit() {
+    //En primer lugar obetenemos el stock
     this.contenedoresService.getStock()
     .subscribe(
       res => {
@@ -29,6 +30,7 @@ export class StockComponent {
   }
 
   Parser(stocks){
+    //Añadimos en la variable final en los 5 tipos de tamaños de contenedores 0, y vamos añadiendo uno más en cada uno por cada contenedor de ese tipo
     this.final[0]=0;
     this.final[1]=0;
     this.final[2]=0;

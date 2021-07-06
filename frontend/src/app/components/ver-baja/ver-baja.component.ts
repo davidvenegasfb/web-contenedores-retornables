@@ -18,6 +18,7 @@ export class VerBajaComponent implements OnInit {
   };
 
   ngOnInit() {
+    //Obtenemos la matricula de la baja por parámetros, y la buscamos en el servidor
     const params = this.activatedroute.snapshot.params;
     if(params.matricula){
       this.contenedoresService.getBaja(params.matricula)
@@ -31,7 +32,7 @@ export class VerBajaComponent implements OnInit {
     }
   }
 
-  
+  //Ponemos la fecha en el formato correcto
   Parser(baja){
     var str = baja.fechabaja;
     var Fecha_correcta1 = str.replace('T23:00:00.000Z','');
